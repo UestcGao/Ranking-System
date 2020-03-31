@@ -39,9 +39,6 @@ export default {
       console.log("iscollapse", !this.sidebar)
       return !this.sidebar
     }
-  },
-  mounted() {
-    console.log("router:    ", this.router)
   }
 }
 </script>
