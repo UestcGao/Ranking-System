@@ -1,0 +1,71 @@
+@import "src/styles/layout-variables.scss";
+
+.el-container {
+  height: 100%;
+
+  .el-aside {
+    height: 90%;
+    overflow-y: auto;
+    transition: width 0.28s;
+
+    .el-submenu__icon-arrow {
+      top: 56%;
+    }
+
+    //reset element-ui css
+    .horizontal-collapse-transition {
+      transition: 0s width ease-in-out, 0s;
+    }
+
+    .icon {
+      margin: 0 14px;
+      color: $--color-text-primary;
+    }
+
+    .el-menu-item {
+      line-height: $--nav-height;
+      height: $--nav-height;
+    }
+
+    .el-submenu {
+      & > .el-submenu__title {
+        line-height: $--nav-height;
+        height: $--nav-height;
+        color: #222222;
+      }
+    }
+
+    .scrollbar-wrapper {
+      overflow-x: hidden;
+
+      .el-scrollbar__view {
+        height: 100%;
+      }
+    }
+
+    .svg-icon {
+      margin-right: 16px;
+    }
+
+    .el-menu {
+      border: none;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &.openSidebar {
+    .sidebar-container {
+      width: $--sibar-width;
+    }
+  }
+
+  .app-header {
+    padding: 0;
+  }
+
+  .app-main {
+    flex-flow: column nowrap;
+    background-color: $--background-color-base;
+  }
+}
