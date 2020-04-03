@@ -3,9 +3,9 @@
 import Layout from '@/layout'
 
 const scoreRouter = {
-  path: '/grade',
+  path: '/score',
   component: Layout,
-  redirect: '/grade',
+  redirect: '/score',
   name: '成绩管理',
   meta: {
     title: '成绩管理',
@@ -14,15 +14,25 @@ const scoreRouter = {
   children: [
     {
       path: '/grade',
-      component: () => import('@/views/grade/index'),
+      component: () => import('@/views/score/grade/index'),
       name: 'grade',
       meta: { title: '年级' }
     },
     {
       path: '/class',
-      component: () => import('@/views/class/index'),
+      component: () => import('@/views/score/class/index'),
       name: 'class',
       meta: { title: '班级' }
+      // children
+    },
+    {
+      path: '/class/:id',
+      component: () => import('@/views/score/class/classScore'),
+      name: 'classScore',
+      meta: { title: '班级明细', cacheEnable: true },
+      // children
+      hidden: true,
+      props: true
     }
   ]
 }

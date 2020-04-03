@@ -43,6 +43,15 @@ Object.keys(filters).forEach(key => {
 
 Vue.config.productionTip = false
 
+// router.beforeEach((to, from, next) => {
+//   /* 路由发生变化修改页面title */
+//   if (to.meta.title) {
+//     // document.title = '侧时候会'
+//     // console.log(document.title)
+//   }
+//   next()
+// })
+
 new Vue({
   el: '#app',
   router,
